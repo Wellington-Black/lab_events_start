@@ -10,6 +10,10 @@ textInput.addEventListener('input',handleInput);
 const handleInput = function (event) {  
   event.preventDefault();
   const resultInput = document.querySelector('#reading-list');
-  resultInput.textContent = `Title:${event.target.value}`;
+  const book = create(event.target);
+  resultInput.appendChild(book);
+  // resultInput.textContent = `Title:${event.target.value}`;
 
 }
+
+
